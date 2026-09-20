@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fictional adaptive emergency rehearsal. Performance in simulation only.">
+  <title>Safe Exit Retry</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2944'/%3E%3Cpath d='M17 45V18h25v27M23 39l9-9 9 9M32 30v19' fill='none' stroke='%23f6b94a' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to rehearsal</a>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">SER</span><span>Safe Exit Retry</span></div>
+    <div class="scenario-label">FICTIONAL SCENARIO</div>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <section id="setup-screen" class="screen setup-screen" aria-labelledby="setup-title">
+      <div class="intro-card">
+        <p class="eyebrow">One decision · one correction · one retry</p>
+        <h1 id="setup-title">Practice the moment the expected route stops working.</h1>
+        <p class="intro-copy">This calm, fictional rehearsal records only what happens inside the simulation. It does not evaluate real-world ability.</p>
+        <div class="boundary-banner" role="note">
+          <strong>PERFORMANCE IN SIMULATION</strong>
+          <span>Not a readiness, compliance, competence, safety, survival, certification, or risk-reduction result.</span>
+        </div>
+      </div>
+
+      <div class="owners-card" aria-labelledby="owners-title">
+        <div>
+          <p class="eyebrow">Required before launch</p>
+          <h2 id="owners-title">Assign the fictional owners</h2>
+        </div>
+        <div class="owner-list">
+          <label class="owner-row"><input type="checkbox" data-owner="program"><span><b>Program owner</b><small>Elena Ruiz · Preparedness Program Manager</small></span></label>
+          <label class="owner-row"><input type="checkbox" data-owner="operations"><span><b>Operational owner</b><small>Carlos Vega · Building Operations Manager</small></span></label>
+          <label class="owner-row"><input type="checkbox" data-owner="training"><span><b>Training / safety owner</b><small>Tomas Leon · Civil Protection Trainer</small></span></label>
+        </div>
+        <p id="owner-status" class="status-copy" aria-live="polite">Assign all three owners to begin.</p>
+        <button id="start-button" class="primary-button" disabled>Start fictional rehearsal</button>
+      </div>
+    </section>
+
+    <section id="rehearsal-shell" class="screen hidden" aria-live="polite" tabindex="-1">
+      <div class="simulation-header">
+        <div>
+          <p class="eyebrow" id="step-label">STEP 1 OF 4</p>
+          <h1 id="screen-title">Primary exit unavailable</h1>
+        </div>
+        <button id="exit-button" class="exit-button">Exit simulation</button>
+      </div>
+      <div class="boundary-banner compact" role="note">
+        <strong>PERFORMANCE IN SIMULATION</strong>
+        <span>Fictional rehearsal only — no readiness or safety score.</span>
+      </div>
+      <div id="stage" class="stage"></div>
+    </section>
+  </main>
+
+  <footer>Fictional training prototype · No audio or session data is saved</footer>
+  <script src="app.js"></script>
+</body>
+</html>
